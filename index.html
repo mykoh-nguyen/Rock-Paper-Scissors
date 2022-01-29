@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        const winner = "";
+        let playerScore = 0;
+        let computerScore =0;
+        while(playerScore !=5 && computerScore !=5){
+                const response = prompt("what do you choose?").toUpperCase();
+
+                const randomNum = Math.floor(Math.random()*3);
+                let computerPlay = null;
+                if(randomNum == 0){
+                    computerPlay = "PAPER";
+                }
+                if(randomNum == 1){
+                    computerPlay = "SCISSOR";
+                }
+                if(randomNum == 2){
+                    computerPlay = "ROCK";
+                }
+                let outcome = "";
+
+                if(response == computerPlay){
+                    outcome=("tie");
+                }
+                if(response == "PAPER" && computerPlay =="ROCK"){
+                    outcome=("You Win");
+                    playerScore ++;
+                }
+                if(response == "PAPER" && computerPlay =="SCISSOR"){
+                    outcome=("You Lose");
+                    computerScore ++;
+                }
+                if(response == "ROCK" && computerPlay =="PAPER"){
+                    outcome=("You lose");
+                    computerScore ++;
+                }
+                if(response == "ROCK" && computerPlay =="SCISSOR"){
+                    outcome=("You win!");
+                    playerScore ++;
+                }
+                if(response == "SCISSOR" && computerPlay =="PAPER"){
+                    outcome=("You Win");
+                    playerScore++;
+                }
+                if(response == "SCISSOR" && computerPlay =="ROCK"){
+                    outcome=("You lose");
+                    computerScore++;
+                }
+                console.log(outcome, "Player:"+playerScore+ "," +"Computer"+computerScore )
+            }
+    
+
+ 
+    </script>
+    <title>Document</title>
+</head>
+<body>
+
+</body>
+</html>
