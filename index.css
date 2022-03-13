@@ -1,0 +1,10 @@
+button{
+    display: inline-block;
+    background-color: black;
+    color:white;
+    width:100px;
+    height: 100px;
+}
+#main{
+    display:inline-block;
+}
